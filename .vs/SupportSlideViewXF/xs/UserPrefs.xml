@@ -1,22 +1,39 @@
-﻿<Properties>
-  <MonoDevelop.Ide.ItemProperties.SupportSlideViewXF.iOS FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{CC5CCFCD-90BA-4C92-9E87-27FA75F02555}|Default">
+  <MonoDevelop.Ide.ItemProperties.DemoAPP.DemoSliders.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D39B639A-E15C-46DA-8FFE-CF9C4512D2FF" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SupportSlideViewXF/Widgets/SupportSlideBase.cs">
+    <Files>
+      <File FileName="SupportSlideViewXF.iOS/Renderers/Sliders/SlideMainViewController.cs" Line="17" Column="26" />
+      <File FileName="SupportSlideViewXF/Widgets/SupportImageSliderView.cs" Line="5" Column="29" />
+      <File FileName="SupportSlideViewXF/Widgets/SupportSlideBase.cs" Line="40" Column="10" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SupportSlideViewXF" expanded="True">
-            <Node name="SupportSlideViewXF" expanded="True" selected="True" />
+            <Node name="SupportSlideViewXF" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Widgets" expanded="True">
+                <Node name="SupportSlideBase.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="SupportSlideViewXF.iOS" expanded="True">
+              <Node name="Renderers" expanded="True">
+                <Node name="Sliders" expanded="True">
+                  <Node name="Base" expanded="True" />
+                  <Node name="Images" expanded="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.DemoAPP.DemoSliders.Android FirstBuild="True" PreferredExecutionTarget="Android.Android_Accelerated_Nougat" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.SupportSlideViewXF FirstBuild="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.SupportSlideViewXF.Nuget FirstBuild="True" />
 </Properties>

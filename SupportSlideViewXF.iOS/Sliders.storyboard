@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="199">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="198">
+            <objects>
+                <viewController id="199" sceneMemberID="viewController" storyboardIdentifier="SlideMainViewController" customClass="SlideMainViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="196"/>
+                        <viewControllerLayoutGuide type="bottom" id="197"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="200">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="0"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" id="532" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <connections>
+                                    <segue id="717" destination="676" kind="embed" identifier="SliderPageViewController_Segue"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" id="203" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="10" y="348" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="206" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="10" y="10" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint id="210" firstAttribute="width" secondItem="206" secondAttribute="height" multiplier="1:1"/>
+                                            <constraint id="211" firstAttribute="width" constant="20"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="205" firstAttribute="width" secondItem="203" secondAttribute="height" multiplier="1:1"/>
+                                    <constraint id="220" firstItem="206" firstAttribute="leading" secondItem="203" secondAttribute="leading" constant="10"/>
+                                    <constraint id="221" firstAttribute="trailing" secondItem="206" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="222" firstItem="206" firstAttribute="top" secondItem="203" secondAttribute="top" constant="10"/>
+                                    <constraint id="223" firstAttribute="bottom" secondItem="206" secondAttribute="bottom" constant="10"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" id="280" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="364" y="348" width="40" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="281" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="10" y="10" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint id="282" firstAttribute="width" secondItem="281" secondAttribute="height" multiplier="1:1"/>
+                                            <constraint id="283" firstAttribute="width" constant="20"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint id="284" firstAttribute="width" secondItem="280" secondAttribute="height" multiplier="1:1"/>
+                                    <constraint id="285" firstItem="281" firstAttribute="leading" secondItem="280" secondAttribute="leading" constant="10"/>
+                                    <constraint id="286" firstAttribute="trailing" secondItem="281" secondAttribute="trailing" constant="10"/>
+                                    <constraint id="287" firstItem="281" firstAttribute="top" secondItem="280" secondAttribute="top" constant="10"/>
+                                    <constraint id="288" firstAttribute="bottom" secondItem="281" secondAttribute="bottom" constant="10"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="362" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="344" y="10" width="40" height="40"/>
+                                <constraints>
+                                    <constraint id="386" firstAttribute="width" secondItem="362" secondAttribute="height" multiplier="1:1"/>
+                                    <constraint id="387" firstAttribute="width" constant="40"/>
+                                </constraints>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="1732" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="699" width="414" height="37"/>
+                            </pageControl>
+                        </subviews>
+                        <constraints>
+                            <constraint id="233" firstAttribute="centerY" secondItem="203" secondAttribute="centerY"/>
+                            <constraint id="234" firstItem="203" firstAttribute="leading" secondItem="200" secondAttribute="leading" constant="10"/>
+                            <constraint id="296" firstItem="280" firstAttribute="centerY" secondItem="200" secondAttribute="centerY"/>
+                            <constraint id="297" firstAttribute="trailing" secondItem="280" secondAttribute="trailing" constant="10"/>
+                            <constraint id="418" firstAttribute="trailingMargin" secondItem="362" secondAttribute="trailing" constant="10"/>
+                            <constraint id="419" firstItem="362" firstAttribute="top" secondItem="200" secondAttribute="top" constant="10"/>
+                            <constraint id="539" firstItem="532" firstAttribute="top" secondItem="200" secondAttribute="top"/>
+                            <constraint id="540" firstAttribute="trailing" secondItem="532" secondAttribute="trailing"/>
+                            <constraint id="541" firstItem="532" firstAttribute="leading" secondItem="200" secondAttribute="leading"/>
+                            <constraint id="542" firstAttribute="bottom" secondItem="532" secondAttribute="bottom"/>
+                            <constraint id="1733" firstItem="532" firstAttribute="bottom" secondItem="1732" secondAttribute="bottom"/>
+                            <constraint id="1734" firstItem="1732" firstAttribute="leading" secondItem="532" secondAttribute="leading"/>
+                            <constraint id="1735" firstItem="532" firstAttribute="trailing" secondItem="1732" secondAttribute="trailing"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BoxArrowLeft" destination="203" id="name-outlet-203"/>
+                        <outlet property="imageArrowLeft" destination="206" id="name-outlet-206"/>
+                        <outlet property="BoxArrowRight" destination="280" id="name-outlet-280"/>
+                        <outlet property="imageArrowRight" destination="281" id="name-outlet-281"/>
+                        <outlet property="imgFullScreen" destination="362" id="name-outlet-362"/>
+                        <outlet property="containerView" destination="532" id="name-outlet-532"/>
+                        <outlet property="pageControlBottom" destination="1732" id="name-outlet-1732"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="201" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-203" y="-69"/>
+        </scene>
+        <scene sceneID="675">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="min" id="676" sceneMemberID="viewController" storyboardIdentifier="SliderPageViewController" customClass="SliderPageViewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="677" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="364" y="-73"/>
+        </scene>
+        <scene sceneID="721">
+            <objects>
+                <viewController id="722" sceneMemberID="viewController" storyboardIdentifier="ImageViewController" customClass="ImageViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="719"/>
+                        <viewControllerLayoutGuide type="bottom" id="720"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="723">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1109">
+                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                                <color key="color" colorSpace="calibratedRGB" red="0.57647058823529407" green="0.12549019607843137" blue="0.5725490196078431" alpha="1"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="990" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="991" firstItem="990" firstAttribute="top" secondItem="723" secondAttribute="top"/>
+                            <constraint id="992" firstItem="990" firstAttribute="leading" secondItem="723" secondAttribute="leading"/>
+                            <constraint id="993" firstAttribute="trailing" secondItem="990" secondAttribute="trailing"/>
+                            <constraint id="994" firstAttribute="bottom" secondItem="990" secondAttribute="bottom"/>
+                            <constraint id="1110" firstItem="1109" firstAttribute="centerY" secondItem="990" secondAttribute="centerY"/>
+                            <constraint id="1111" firstItem="1109" firstAttribute="centerX" secondItem="990" secondAttribute="centerX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="990" id="name-outlet-990"/>
+                        <outlet property="indicator" destination="1109" id="name-outlet-1109"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="724" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="891" y="-74"/>
+        </scene>
+        <scene sceneID="1155">
+            <objects>
+                <viewController id="1156" sceneMemberID="viewController" storyboardIdentifier="LoadingViewController" customClass="LoadingViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1153"/>
+                        <viewControllerLayoutGuide type="bottom" id="1154"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1157">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1441">
+                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                                <color key="color" colorSpace="calibratedRGB" red="0.57647058823529407" green="0.12549019607843137" blue="0.5725490196078431" alpha="1"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="1442" firstItem="1441" firstAttribute="centerY" secondItem="1157" secondAttribute="centerY"/>
+                            <constraint id="1443" firstItem="1441" firstAttribute="centerX" secondItem="1157" secondAttribute="centerX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="indicator" destination="1441" id="name-outlet-1441"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1158" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1422" y="-74"/>
+        </scene>
+    </scenes>
+</document>
