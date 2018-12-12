@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
+using SupportSlideViewXF.Models;
 using Xamarin.Forms;
 
 namespace SupportSlideViewXF.Widgets
@@ -11,6 +12,13 @@ namespace SupportSlideViewXF.Widgets
 
     public abstract class SupportSlideBase : View
     {
+        public static readonly BindableProperty SlideModeProperty = BindableProperty.Create("SlideMode", typeof(SlideMode), typeof(SupportSlideBase), SlideMode.Image);
+        public SlideMode SlideMode
+        {
+            get { return (SlideMode)GetValue(SlideModeProperty); }
+            set { SetValue(SlideModeProperty, value); }
+        }
+
         public static readonly BindableProperty ShowIndicatorsProperty = BindableProperty.Create("ShowIndicators", typeof(bool), typeof(SupportSlideBase), true);
         public bool ShowIndicators
         {
@@ -18,7 +26,7 @@ namespace SupportSlideViewXF.Widgets
             set { SetValue(ShowIndicatorsProperty, value); }
         }
 
-        public static readonly BindableProperty TintColorProperty = BindableProperty.Create("TintColor", typeof(Color), typeof(SupportSlideBase), Color.Gray);
+        public static readonly BindableProperty TintColorProperty = BindableProperty.Create("TintColor", typeof(Color), typeof(SupportSlideBase), Color.Olive);
         public Color TintColor
         {
             get { return (Color)GetValue(TintColorProperty); }

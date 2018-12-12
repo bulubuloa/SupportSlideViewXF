@@ -8,6 +8,7 @@
 
         <sliders:SupportImageSliderView HeightRequest="400"
                                         VerticalOptions="CenterAndExpand"
+                                        ShowArrows="false"
                                         ImageItems="{Binding ImageItems}" />
 
     </StackLayout>

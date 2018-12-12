@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace DemoSliders
@@ -19,12 +20,16 @@ namespace DemoSliders
 
         public MainViewModel()
         {
-            ImageItems = new List<string>()
-            {
-                "https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F488289%2Fpile-of-100-dollar-bills_gettyimages-452970107.jpg&w=700&op=resize",
-                "https://www.gannett-cdn.com/-mm-/3b8b0abcb585d9841e5193c3d072eed1e5ce62bc/c=0-30-580-356/local/-/media/2018/02/24/USATODAY/usatsports/large-pile-of-hundred-dollar-bills-cash-money-savings-rich_large.jpg?width=3200&height=1680&fit=crop",
-                "https://www.washingtonpost.com/resizer/WjcCKKASaRe_9I1CbmHTaqHyt4I=/480x0/arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/62BEHGTVEQI6LDMTBLZRP3KYZE.jpg"
-            };
+            Task.Delay(4000).ContinueWith(delegate {
+                ImageItems = new List<string>()
+                {
+                    "https://brand.campaign.adidas.com/Images/originals-fw18-dragonball-mh-d-v1_tcm66-283071.jpg?locale=en_US&device=mobile&version=6",
+                    "https://i.kinja-img.com/gawker-media/image/upload/s--bjOlN1Qv--/c_scale,f_auto,fl_progressive,q_80,w_800/iar4q55hka6jjpzelpy8.jpg",
+                    "https://assets1.ignimgs.com/2018/08/30/dbzvillains-blogroll-1535589058116_1280w.jpg",
+                    "https://static0.srcdn.com/wordpress/wp-content/uploads/2018/07/Dragon-Ball-Ultra-Instinct-Goku-Kamehameha.jpg",
+                    "https://thedaoofdragonball.com/wp-content/uploads/2012/10/dragon-ball-culture-6-available-home-print.png"
+                };
+            });
         }
     }
 }

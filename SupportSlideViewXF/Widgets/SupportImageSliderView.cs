@@ -30,5 +30,12 @@ namespace SupportSlideViewXF.Widgets
             get { return (bool)GetValue(ShowBlankLoadingProperty); }
             set { SetValue(ShowBlankLoadingProperty, value); }
         }
+
+        public static readonly BindableProperty AspectTypeProperty = BindableProperty.Create("AspectType", typeof(Aspect), typeof(SupportImageSliderView), Aspect.AspectFill);
+        public Aspect AspectType
+        {
+            get { return (Aspect)GetValue(AspectTypeProperty); }
+            set { SetValue(AspectTypeProperty, value); }
+        }
     }
 }

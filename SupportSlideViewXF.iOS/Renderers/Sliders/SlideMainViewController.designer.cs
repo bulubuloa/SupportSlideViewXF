@@ -42,6 +42,10 @@ namespace SupportSlideViewXF.iOS
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIPageControl pageControlBottom { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIPageControl pageControlTop { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (BoxArrowLeft != null) {
@@ -77,6 +81,11 @@ namespace SupportSlideViewXF.iOS
             if (pageControlBottom != null) {
                 pageControlBottom.Dispose ();
                 pageControlBottom = null;
+            }
+
+            if (pageControlTop != null) {
+                pageControlTop.Dispose ();
+                pageControlTop = null;
             }
         }
     }

@@ -101,6 +101,10 @@
     <Compile Include="Renderers\Sliders\Base\SliderPageViewController.designer.cs">
       <DependentUpon>SliderPageViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="ZoomPageViewController.cs" />
+    <Compile Include="ZoomPageViewController.designer.cs">
+      <DependentUpon>ZoomPageViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SupportSlideViewXF\SupportSlideViewXF.csproj">
@@ -115,7 +119,9 @@
     <InterfaceDefinition Include="Sliders.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\image_notfound%402x.png" />
+    <BundleResource Include="Resources\image_notfound%403x.png" />
+    <BundleResource Include="Resources\arrow_right%402x.png" />
+    <BundleResource Include="Resources\arrow_left%402x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.4.0.1008975\build\Xamarin.Forms.targets')" />

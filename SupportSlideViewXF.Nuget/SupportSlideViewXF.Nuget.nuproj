@@ -5,9 +5,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E10B2952-B421-4F55-9170-69186CBE4605}</ProjectGuid>
-    <Description>SupportSlideViewXF</Description>
+    <Description>A simple slider for images or view</Description>
     <PackageId>SupportSlideViewXF</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>0.1.121318-alpha</PackageVersion>
     <Authors>QuachHoang</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -16,6 +16,13 @@
     <UsePartialTypes>false</UsePartialTypes>
     <AssemblyName>SupportSlideViewXF.Nuget</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Owners>QuachHoang</Owners>
+    <Copyright>QuachHoang@2018</Copyright>
+    <PackageTags>Xamarin, Xamarin.Forms, Xamarin.iOS, Xamarin.Android, Slider, Carousel</PackageTags>
+    <Title>SupportSlideViewXF</Title>
+    <Summary>A simple slider for images or view</Summary>
+    <PackageProjectUrl>https://github.com/bulubuloa/SupportSlideViewXF</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/bulubuloa/SupportSlideViewXF</PackageLicenseUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

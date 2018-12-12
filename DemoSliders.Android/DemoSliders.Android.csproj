@@ -15,7 +15,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -94,6 +94,14 @@
     <ProjectReference Include="..\DemoSliders\DemoSliders.csproj">
       <Project>{ED38698F-07E5-4C5A-821C-9528A856734F}</Project>
       <Name>DemoSliders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupportSlideViewXF.Droid\SupportSlideViewXF.Droid.csproj">
+      <Project>{6381AD9A-B30A-4A86-B585-24DB03A78DFC}</Project>
+      <Name>SupportSlideViewXF.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupportSlideViewXF\SupportSlideViewXF.csproj">
+      <Project>{43B973F5-56F9-47F3-A9C8-76B721756E2B}</Project>
+      <Name>SupportSlideViewXF</Name>
     </ProjectReference>
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

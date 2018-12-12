@@ -1,11 +1,8 @@
-﻿using System;
-
+﻿
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using SupportSlideViewXF.Droid;
 
 namespace DemoSliders.Droid
 {
@@ -19,6 +16,7 @@ namespace DemoSliders.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            SupportSlideViewSetup.Initialize(this);
             LoadApplication(new App());
         }
     }

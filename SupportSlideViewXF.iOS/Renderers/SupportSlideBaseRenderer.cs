@@ -1,6 +1,4 @@
-﻿using System;
-using System.ComponentModel;
-using SupportSlideViewXF.iOS.Renderers.Sliders;
+﻿using System.ComponentModel;
 using SupportSlideViewXF.Widgets;
 using UIKit;
 using Xamarin.Forms.Platform.iOS;
@@ -15,7 +13,6 @@ namespace SupportSlideViewXF.iOS.Renderers
         protected UIStoryboard slidersStoryboard;
         protected SlideMainViewController slideMainViewController;
 
-        private int TempIndex = 0;
 
         public SupportSlideBaseRenderer()
         {
@@ -41,23 +38,23 @@ namespace SupportSlideViewXF.iOS.Renderers
             base.OnElementPropertyChanged(sender, e);
             if (e.PropertyName.Equals(SupportSlideBase.ShowIndicatorsProperty.PropertyName))
             {
-
+                slideMainViewController.SetShowIndicator(supportSlide);
             }
             else if (e.PropertyName.Equals(SupportSlideBase.TintColorProperty.PropertyName))
             {
-
+                slideMainViewController.SetTintColorIndicator(supportSlide.TintColor);
             }
             else if (e.PropertyName.Equals(SupportSlideBase.CurrentColorProperty.PropertyName))
             {
-
+                slideMainViewController.SetCurrentColorIndicator(supportSlide.CurrentColor);
             }
             else if (e.PropertyName.Equals(SupportSlideBase.ShowArrowsProperty.PropertyName))
             {
-
+                slideMainViewController.SetShowArrows(supportSlide.ShowArrows);
             }
             else if (e.PropertyName.Equals(SupportSlideBase.IndicatorsPositionProperty.PropertyName))
             {
-
+                slideMainViewController.SetShowIndicator(supportSlide);
             }
             else if (e.PropertyName.Equals(SupportSlideBase.CurrentPageIndexProperty.PropertyName))
             {
@@ -65,40 +62,23 @@ namespace SupportSlideViewXF.iOS.Renderers
             }
         }
 
-       
-        protected virtual void OnInitializeOriginalView( )
-        {
-
-        }
-
-        void PagerViewController_DidFinishAnimating(object sender, UIPageViewFinishedAnimationEventArgs e)
-        {
-            if (e.Completed)
-            {
-                supportSlide.SendOnPageChanged(TempIndex);
-            }
-        }
-
-        void PagerViewController_WillTransition(object sender, UIPageViewControllerTransitionEventArgs e)
-        {
-            if (e.PendingViewControllers != null && e.PendingViewControllers.Length > 0)
-            {
-                TempIndex = (e.PendingViewControllers[0] as BaseViewController).Index;
-            }
-        }
-
-        protected virtual void OnSetNativeControl( )
+        private void OnSetNativeControl()
         {
             slideMainViewController = (SlideMainViewController)slidersStoryboard.InstantiateViewController("SlideMainViewController");
-            //slideMainViewController.ConfigStyle(supportSlide);
-
-
-            slideMainViewController.GetPager().WillTransition += PagerViewController_WillTransition;
-            slideMainViewController.GetPager().DidFinishAnimating += PagerViewController_DidFinishAnimating;
-
-
+            slideMainViewController.supportSlideBase = supportSlide;
             slideMainViewController.View.ClipsToBounds = true;
+            OnSetNativeDataSource();
             SetNativeControl(slideMainViewController.View);
+        }
+
+        private void OnInitializeOriginalView( )
+        {
+
+        }
+
+        protected virtual void OnSetNativeDataSource()
+        {
+
         }
     }
 }

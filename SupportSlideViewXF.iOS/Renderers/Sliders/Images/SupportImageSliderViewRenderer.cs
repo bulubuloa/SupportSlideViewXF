@@ -10,18 +10,9 @@ namespace SupportSlideViewXF.iOS.Renderers
 {
     public class SupportImageSliderViewRenderer : SupportSlideBaseRenderer<SupportImageSliderView>
     {
-        public SupportImageSliderViewRenderer()
+        protected override void OnSetNativeDataSource()
         {
-        }
-
-        protected override void OnInitializeOriginalView( )
-        {
-            base.OnInitializeOriginalView();
-        }
-
-        protected override void OnSetNativeControl( )
-        {
-            base.OnSetNativeControl();
+            base.OnSetNativeDataSource();
             InitSource();
         }
 
@@ -37,7 +28,6 @@ namespace SupportSlideViewXF.iOS.Renderers
             }
         }
 
-
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
@@ -50,11 +40,24 @@ namespace SupportSlideViewXF.iOS.Renderers
             }
             else if (e.PropertyName.Equals(SupportImageSliderView.ShowFullScreenProperty.PropertyName))
             {
-
+                if (slideMainViewController != null)
+                {
+                    slideMainViewController.SetFullScreen(supportSlide.ShowFullScreen);
+                }
             }
             else if (e.PropertyName.Equals(SupportImageSliderView.ShowBlankLoadingProperty.PropertyName))
             {
+                if (slideMainViewController != null)
+                {
+                    slideMainViewController.SetBlankLoading(supportSlide.ShowBlankLoading);
+                }
+            }
+            else if (e.PropertyName.Equals(SupportImageSliderView.AspectTypeProperty.PropertyName))
+            {
+                if (slideMainViewController != null)
+                {
 
+                }
             }
         }
     }

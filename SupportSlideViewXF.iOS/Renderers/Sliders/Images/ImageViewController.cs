@@ -2,17 +2,44 @@ using FFImageLoading;
 using SupportSlideViewXF.iOS.Renderers.Sliders;
 using System;
 using UIKit;
+using Xamarin.Forms;
 
 namespace SupportSlideViewXF.iOS
 {
     public partial class ImageViewController : BaseViewController
     {
-
+        public Aspect AspectType { set; get; }
         public string ImageUrl { set; get; }
         private bool ImageLoaded = false;
 
         public ImageViewController (IntPtr handle) : base (handle)
         {
+        }
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+            switch (AspectType)
+            {
+                case Aspect.AspectFit:
+                    imageView.ContentMode = UIViewContentMode.ScaleAspectFit;
+                    break;
+                case Aspect.AspectFill:
+                    imageView.ContentMode = UIViewContentMode.ScaleAspectFill;
+                    break;
+                case Aspect.Fill:
+                    imageView.ContentMode = UIViewContentMode.ScaleToFill;
+                    break;
+                default:
+                    break;
+            }
+
+            UITapGestureRecognizer tapZoom = new UITapGestureRecognizer(() => {
+
+            });
+            tapZoom.NumberOfTapsRequired = 2;
+            imageView.UserInteractionEnabled = true;
+            imageView.AddGestureRecognizer(tapZoom);
         }
 
         public override void ViewDidAppear(bool animated)
@@ -45,9 +72,10 @@ namespace SupportSlideViewXF.iOS
             }
         }
 
-        public void SetImage(string imageURL)
+        public void SetImage(string imageURL, Aspect aspect)
         {
             ImageUrl = imageURL;
+            AspectType = aspect;
         }
     }
 }
