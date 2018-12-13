@@ -120,6 +120,9 @@
     <Reference Include="FFImageLoading.Platform">
       <HintPath>..\packages\Xamarin.FFImageLoading.2.4.4.859\lib\MonoAndroid10\FFImageLoading.Platform.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.ShimmerLayout">
+      <HintPath>..\packages\Xamarin.Android.ShimmerLayout.0.5.0\lib\MonoAndroid70\Xamarin.Android.ShimmerLayout.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -137,6 +140,13 @@
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\layout\layout_main_pager.axml" />
     <AndroidResource Include="Resources\layout\layout_single_image.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\arrow_left.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\arrow_right.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\image_notfound.png" />
+    <AndroidResource Include="Resources\drawable\tab_indicator_default.xml" />
+    <AndroidResource Include="Resources\drawable\tab_selector.xml" />
+    <AndroidResource Include="Resources\drawable\tab_indicator_selected.xml" />
+    <AndroidResource Include="Resources\drawable\shadow_bottom.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\layout\" />
@@ -144,6 +154,7 @@
     <Folder Include="Renderers\Sliders\" />
     <Folder Include="Renderers\Sliders\Adapters\" />
     <Folder Include="Renderers\Sliders\Images\" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SupportSlideViewXF\SupportSlideViewXF.csproj">
