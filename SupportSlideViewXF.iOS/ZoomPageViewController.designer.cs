@@ -14,5 +14,8 @@ namespace SupportSlideViewXF.iOS
     [Register ("ZoomPageViewController")]
     partial class ZoomPageViewController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }

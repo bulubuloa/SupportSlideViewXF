@@ -229,6 +229,23 @@
             </objects>
             <point key="canvasLocation" x="-203" y="822"/>
         </scene>
+        <scene sceneID="3369">
+            <objects>
+                <viewController id="3370" sceneMemberID="viewController" storyboardIdentifier="BlankViewController" customClass="BlankViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3367"/>
+                        <viewControllerLayoutGuide type="bottom" id="3368"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3371">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3372" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="786"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow_right.png" width="16" height="16"/>

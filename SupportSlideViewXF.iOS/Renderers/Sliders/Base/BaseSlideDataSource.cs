@@ -18,7 +18,7 @@ namespace SupportSlideViewXF.iOS.Renderers.Sliders
         {
             try
             {
-                var currentPage = referenceViewController as ImageViewController;
+                var currentPage = referenceViewController as BaseViewController;
                 var index = currentPage.Index;
                 if (index < baseViewControllers.Count - 1)
                 {
@@ -41,7 +41,7 @@ namespace SupportSlideViewXF.iOS.Renderers.Sliders
         {
             try
             {
-                var currentPage = referenceViewController as ImageViewController;
+                var currentPage = referenceViewController as BaseViewController;
                 var index = currentPage.Index;
                 if (index > 0)
                 {

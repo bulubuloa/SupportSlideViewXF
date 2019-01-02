@@ -29,8 +29,9 @@ namespace SupportSlideViewXF.iOS
         /*
          * PROPERTY FOR VIEW MODE
          */
+        private List<View> viewItems;
 
-       
+
         public SlideMainViewController (IntPtr handle) : base (handle)
         {
         }
@@ -145,6 +146,13 @@ namespace SupportSlideViewXF.iOS
          * PUBLIC FUNCTION 
          */
         #region public function
+        public void ReInitializeViewsSlider(List<View> views)
+        {
+            viewItems = views;
+            ClearInstance();
+            InitSource();
+        }
+
         public void ReInitializeImageSlider(List<string> _imageItems)
         {
             imageItems = _imageItems;
@@ -286,6 +294,64 @@ namespace SupportSlideViewXF.iOS
             }
         }
 
+        private void InitializeViewSlider()
+        {
+            if (viewItems != null && viewItems.Count > 0)
+            {
+                var storyboard = UIStoryboard.FromName("Sliders", null);
+                baseViewControllers = new List<BaseViewController>();
+
+                int max = viewItems.Count;
+                SetIndicatorPage(max);
+
+                for (int i = 0; i < max; i++)
+                {
+                    var item = viewItems[i];
+
+                    var bounds = supportSlideBase.Bounds;
+                    var size = new CoreGraphics.CGRect(bounds.X, bounds.Y, bounds.Width, bounds.Height);
+                    Console.WriteLine(size.ToString());
+
+                    if (Platform.GetRenderer(item) == null)
+                        Platform.SetRenderer(item, Platform.CreateRenderer(item));
+
+                    var vRenderer = Platform.GetRenderer(item);
+                    vRenderer.NativeView.Frame = size;
+                    vRenderer.NativeView.AutoresizingMask = UIViewAutoresizing.All;
+                    vRenderer.NativeView.ContentMode = UIViewContentMode.ScaleToFill;
+                    vRenderer.Element?.Layout(size.ToRectangle());
+                    var nativeView = vRenderer.NativeView;
+                    nativeView.SetNeedsLayout();
+
+                    //var renderer = Platform.CreateRenderer(item);
+                    //Console.WriteLine(supportSlideBase.Bounds);
+                    //var size = new CoreGraphics.CGRect(0,0, supportSlideBase.Bounds.Width, supportSlideBase.Bounds.Height);
+                    //renderer.NativeView.Frame = size;
+                    //renderer.NativeView.AutoresizingMask = UIViewAutoresizing.All;
+                    //renderer.NativeView.ContentMode = UIViewContentMode.ScaleToFill;
+                    //renderer.Element.Layout(size.ToRectangle());
+
+                    //var nativeView = renderer.NativeView;
+                    //nativeView.SetNeedsLayout();
+
+                    var blankViewController = (BlankViewController)storyboard.InstantiateViewController("BlankViewController");
+                    blankViewController.Index = i;
+
+                    blankViewController.View = nativeView;
+                    baseViewControllers.Add(blankViewController);
+                }
+
+                slideDataSource = new BaseSlideDataSource(baseViewControllers);
+                pageViewController.DataSource = slideDataSource;
+                pageViewController.SetViewControllers(new UIViewController[] { baseViewControllers[0] }, UIPageViewControllerNavigationDirection.Forward, false, null);
+            }
+            else
+            {
+                ClearInstance();
+            }
+        }
+
+
         private void InitSource()
         {
             if (pageViewController != null)
@@ -296,7 +362,7 @@ namespace SupportSlideViewXF.iOS
                 }
                 else if(supportSlideBase.SlideMode == SlideMode.View)
                 {
-
+                    InitializeViewSlider();
                 }
                 else
                 {

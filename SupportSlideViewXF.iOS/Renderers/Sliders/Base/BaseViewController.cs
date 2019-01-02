@@ -7,6 +7,11 @@ namespace SupportSlideViewXF.iOS.Renderers.Sliders
     {
         public int Index { set; get; }
 
+        public BaseViewController()
+        {
+
+        }
+
         public BaseViewController(IntPtr handle) : base(handle)
         {
         }

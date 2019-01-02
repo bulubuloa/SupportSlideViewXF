@@ -105,10 +105,16 @@
     <Compile Include="ZoomPageViewController.designer.cs">
       <DependentUpon>ZoomPageViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Renderers\Sliders\Views\SupportContentSliderViewRenderer.cs" />
+    <Compile Include="BlankViewController.cs" />
+    <Compile Include="BlankViewController.designer.cs">
+      <DependentUpon>BlankViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderers\Sliders\SupportSlideViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SupportSlideViewXF\SupportSlideViewXF.csproj">
-      <Project>{43B973F5-56F9-47F3-A9C8-76B721756E2B}</Project>
+      <Project>{0D3BAEFF-8FA5-4D87-BBC1-FB0503E30DA7}</Project>
       <Name>SupportSlideViewXF</Name>
     </ProjectReference>
   </ItemGroup>

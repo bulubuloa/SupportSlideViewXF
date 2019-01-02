@@ -1,13 +1,46 @@
 ﻿<Properties StartupConfiguration="{CC5CCFCD-90BA-4C92-9E87-27FA75F02555}|Default">
   <MonoDevelop.Ide.ItemProperties.DemoAPP.DemoSliders.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.D39B639A-E15C-46DA-8FFE-CF9C4512D2FF" />
   <MonoDevelop.Ide.ItemProperties.SupportSlideViewXF.Droid AndroidDesignerPreferredDevice="Nexus 4" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="SupportSlideViewXF.iOS/Renderers/Sliders/SupportSlideViewRenderer.cs">
+    <Files>
+      <File FileName="SupportSlideViewXF/Widgets/SupportContentSliderView.cs" Line="26" Column="1" />
+      <File FileName="SupportSlideViewXF.iOS/Renderers/Sliders/Views/SupportContentSliderViewRenderer.cs" Line="41" Column="10" />
+      <File FileName="DemoSliders/App.xaml" Line="5" Column="15" />
+      <File FileName="DemoSliders/MainPage.xaml" Line="13" Column="41" />
+      <File FileName="DemoSliders/MainViewModel.cs" Line="46" Column="26" />
+      <File FileName="DemoSliders.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="SupportSlideViewXF.iOS/Sliders.storyboard" />
+      <File FileName="SupportSlideViewXF.iOS/Renderers/Sliders/Images/ImageViewController.cs" Line="9" Column="66" />
+      <File FileName="SupportSlideViewXF.iOS/Renderers/Sliders/Base/BaseSlideDataSource.cs" Line="8" Column="37" />
+      <File FileName="SupportSlideViewXF.iOS/Renderers/Sliders/Images/SupportImageSliderViewRenderer.cs" Line="8" Column="56" />
+      <File FileName="SupportSlideViewXF.iOS/Renderers/SupportSlideBaseRenderer.cs" Line="47" Column="93" />
+      <File FileName="SupportSlideViewXF.iOS/Renderers/Sliders/SupportSlideViewRenderer.cs" Line="98" Column="63" />
+      <File FileName="SupportSlideViewXF/Models/IEnumerableExtensions.cs" Line="22" Column="35" />
+      <File FileName="SupportSlideViewXF.iOS/Renderers/Sliders/SlideMainViewController.cs" Line="341" Column="66" NotebookId="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SupportSlideViewXF" expanded="True">
             <Node name="DemoAPP" expanded="True">
-              <Node name="DemoSliders.iOS" selected="True" />
+              <Node name="DemoSliders.iOS" expanded="True" />
+            </Node>
+            <Node name="SupportSlideViewXF" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Widgets" expanded="True" />
+            </Node>
+            <Node name="SupportSlideViewXF.iOS" expanded="True">
+              <Node name="Renderers" expanded="True">
+                <Node name="Sliders" expanded="True">
+                  <Node name="Base" expanded="True" />
+                  <Node name="Images" expanded="True" />
+                  <Node name="Views" expanded="True" />
+                  <Node name="SupportSlideViewRenderer.cs" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
@@ -16,7 +49,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.DemoAPP.DemoSliders.Android PreferredExecutionTarget="Android.192.168.58.101:5555" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

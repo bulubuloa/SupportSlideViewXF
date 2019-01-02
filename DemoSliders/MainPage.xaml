@@ -6,10 +6,10 @@
              xmlns:sliders="clr-namespace:SupportSlideViewXF.Widgets;assembly=SupportSlideViewXF">
     <StackLayout>
 
-        <sliders:SupportImageSliderView HeightRequest="400"
+        <sliders:SupportContentSliderView HeightRequest="400"
                                         VerticalOptions="CenterAndExpand"
                                         ShowArrows="false"
-                                        ImageItems="{Binding ImageItems}" />
+                                        ViewItems="{Binding ViewItems}" />
 
     </StackLayout>
 </ContentPage>

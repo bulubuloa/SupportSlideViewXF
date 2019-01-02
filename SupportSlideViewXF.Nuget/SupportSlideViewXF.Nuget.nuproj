@@ -7,7 +7,7 @@
     <ProjectGuid>{E10B2952-B421-4F55-9170-69186CBE4605}</ProjectGuid>
     <Description>A simple slider for images or view</Description>
     <PackageId>SupportSlideViewXF</PackageId>
-    <PackageVersion>0.1.121318-alpha</PackageVersion>
+    <PackageVersion>0.4.121418-alpha</PackageVersion>
     <Authors>QuachHoang</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>

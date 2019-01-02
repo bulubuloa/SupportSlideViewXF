@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Diagnostics;
 using SupportSlideViewXF.Widgets;
 using UIKit;
 using Xamarin.Forms.Platform.iOS;
@@ -25,6 +26,7 @@ namespace SupportSlideViewXF.iOS.Renderers
             if (e.NewElement != null && e.NewElement is TSupportSlide)
             {
                 supportSlide = e.NewElement as TSupportSlide;
+                supportSlide.SizeChanged += SupportSlide_SizeChanged;
                 if (Control == null)
                 {
                     OnInitializeOriginalView();
@@ -32,6 +34,12 @@ namespace SupportSlideViewXF.iOS.Renderers
                 }
             }
         }
+
+        void SupportSlide_SizeChanged(object sender, System.EventArgs e)
+        {
+            Debug.WriteLine(supportSlide.Bounds);
+        }
+
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
